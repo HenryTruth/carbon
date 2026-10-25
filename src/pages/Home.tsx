@@ -1,7 +1,7 @@
 import { Bell } from 'lucide-react'
 import BalanceCard from '@/components/home/BalanceCard'
+import QuickAccess from '@/components/home/QuickAccess'
 import QuickActions from '@/components/home/QuickActions'
-import SpendingSummary from '@/components/home/SpendingSummary'
 import TransactionList from '@/components/home/TransactionList'
 import { account, transactions } from '@/data/mock'
 import { greeting } from '@/lib/format'
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="min-w-0 space-y-5 lg:col-span-2">
           <BalanceCard account={account} />
           <QuickActions />
-          <SpendingSummary transactions={transactions} />
+          <QuickAccess />
         </div>
         <div className="min-w-0 lg:col-span-3">
           <TransactionList transactions={transactions} />

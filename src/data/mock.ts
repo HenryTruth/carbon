@@ -6,10 +6,10 @@ export const MOCK_PASSCODE = '12345'
 export const account: Account = {
   id: 'acc_001',
   bankName: 'Carbon Bank',
-  holderName: 'Henry Truth',
+  holderName: 'Henry Joshua',
   accountNumber: '0123456789',
   accountType: 'Savings',
-  balance: 1248500.75,
+  balance: 8350000,
   currency: 'NGN',
 }
 

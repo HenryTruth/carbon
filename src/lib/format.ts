@@ -22,7 +22,7 @@ export function formatDayLabel(iso: string) {
 }
 
 export function maskAccountNumber(value: string) {
-  return value.replace(/(\d{3})(\d{3})(\d{4})/, '$1 $2 $3')
+  return `•••• •• ${value.slice(-4)}`
 }
 
 export function greeting(date = new Date()) {
