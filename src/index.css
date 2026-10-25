@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #0a0b0d;
+  --color-surface: #131519;
+  --color-surface-raised: #1b1e23;
+  --color-line: #262a31;
+  --color-ink: #f4f6f8;
+  --color-ink-muted: #8b93a1;
+  --color-brand: #3cf29b;
+  --color-brand-ink: #04170d;
+  --color-success: #3cf29b;
+  --color-danger: #ff6b6b;
+
+  --animate-shake: shake 0.4s ease-in-out;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+  --animate-logo: logo-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes logo-in {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+  }
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-canvas text-ink font-sans antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
