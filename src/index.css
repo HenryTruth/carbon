@@ -3,6 +3,17 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
+  /* Type scale ~12% below Tailwind's defaults for a denser, app-like feel. */
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.375rem;
+  --text-3xl: 1.625rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.625rem;
+
   --color-canvas: #ffffff;
   --color-surface: #ffffff;
   --color-surface-raised: #f1edfd;
@@ -43,6 +54,6 @@ body,
 }
 
 body {
-  @apply bg-canvas text-ink font-sans antialiased;
+  @apply bg-canvas text-ink font-sans text-base antialiased;
   -webkit-tap-highlight-color: transparent;
 }

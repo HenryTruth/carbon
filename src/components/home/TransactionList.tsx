@@ -127,7 +127,7 @@ function TransactionRow({ transaction: t }: { transaction: Transaction }) {
         {t.status !== 'successful' && (
           <p
             className={cn(
-              'mt-0.5 text-[11px] font-medium capitalize',
+              'mt-0.5 text-[10px] font-medium capitalize',
               t.status === 'pending' ? 'text-amber-600' : 'text-danger',
             )}
           >
