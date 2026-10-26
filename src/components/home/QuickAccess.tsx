@@ -1,41 +1,29 @@
-import {
-  Banknote,
-  HandCoins,
-  PiggyBank,
-  ShieldCheck,
-  TrendingUp,
-  Tv,
-  Wifi,
-  Zap,
-} from 'lucide-react'
+import { CreditCard, FileChartColumn, Receipt, Smartphone } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const SERVICES = [
-  { label: 'Data', icon: Wifi },
-  { label: 'Electricity', icon: Zap },
-  { label: 'Cable TV', icon: Tv },
-  { label: 'Withdraw', icon: Banknote },
-  { label: 'Savings', icon: PiggyBank },
-  { label: 'Loans', icon: HandCoins },
-  { label: 'Invest', icon: TrendingUp },
-  { label: 'Insurance', icon: ShieldCheck },
+  { label: 'Credit Report', icon: FileChartColumn, to: '/loans', tint: 'bg-orange-100 text-orange-600' },
+  { label: 'Cards', icon: CreditCard, to: '/cards', tint: 'bg-pink-100 text-pink-600' },
+  { label: 'Pay Bills', icon: Receipt, to: '/payments', tint: 'bg-green-100 text-green-600' },
+  { label: 'Buy Airtime', icon: Smartphone, to: '/payments', tint: 'bg-sky-100 text-sky-600' },
 ]
 
 export default function QuickAccess() {
   return (
-    <section className="rounded-3xl bg-surface p-5 ring-1 ring-line">
-      <h2 className="text-sm font-semibold">Quick access</h2>
-      <div className="mt-4 grid grid-cols-4 gap-x-2 gap-y-4">
-        {SERVICES.map(({ label, icon: Icon }) => (
-          <button
+    <section className="rounded-3xl bg-surface p-5 shadow-[0_4px_24px_rgba(60,40,140,0.08)] ring-1 ring-line">
+      <h2 className="font-semibold">Quick Access</h2>
+      <div className="mt-4 grid grid-cols-4 gap-2 sm:gap-3">
+        {SERVICES.map(({ label, icon: Icon, to, tint }) => (
+          <Link
             key={label}
-            type="button"
-            className="group flex flex-col items-center gap-2 rounded-xl py-1 text-[11px] font-medium text-ink-muted transition hover:text-ink sm:text-xs"
+            to={to}
+            className="flex flex-col items-center gap-2 rounded-2xl bg-[#f7f6fb] px-1 py-4 text-center text-xs font-medium transition hover:bg-surface-raised sm:text-sm"
           >
-            <span className="flex size-11 items-center justify-center rounded-2xl bg-surface-raised text-ink transition group-hover:bg-brand/10 group-hover:text-brand">
+            <span className={`flex size-10 items-center justify-center rounded-xl ${tint}`}>
               <Icon className="size-5" />
             </span>
             {label}
-          </button>
+          </Link>
         ))}
       </div>
     </section>

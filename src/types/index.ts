@@ -5,7 +5,12 @@ export interface Account {
   accountNumber: string
   accountType: string
   balance: number
+  savingsBalance: number
+  availableCredit: number
   currency: string
+  status: 'Active' | 'Restricted'
+  tier: number
+  lastUpdated: string
 }
 
 export type TransactionCategory =

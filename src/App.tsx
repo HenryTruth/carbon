@@ -13,9 +13,11 @@ export default function App() {
       <Route path="/unlock" element={<Passcode />} />
       <Route element={<AppLayout />}>
         <Route path="/home" element={<Home />} />
-        <Route path="/cards" element={<ComingSoon />} />
+        <Route path="/savings" element={<ComingSoon />} />
         <Route path="/payments" element={<ComingSoon />} />
-        <Route path="/profile" element={<ComingSoon />} />
+        <Route path="/loans" element={<ComingSoon />} />
+        <Route path="/account" element={<ComingSoon />} />
+        <Route path="/cards" element={<ComingSoon />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

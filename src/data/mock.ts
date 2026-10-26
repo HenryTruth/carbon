@@ -3,14 +3,24 @@ import type { Account, Transaction } from '@/types'
 // Static data for the UI-only phase. Swap for API calls later.
 export const MOCK_PASSCODE = '12345'
 
+// Fresh 10-digit number on every load so no real account number is baked in.
+function randomAccountNumber() {
+  return Array.from({ length: 10 }, () => Math.floor(Math.random() * 10)).join('')
+}
+
 export const account: Account = {
   id: 'acc_001',
   bankName: 'Carbon Bank',
   holderName: 'Henry Joshua',
-  accountNumber: '0123456789',
+  accountNumber: randomAccountNumber(),
   accountType: 'Savings',
   balance: 8350000,
+  savingsBalance: 0,
+  availableCredit: 240000,
   currency: 'NGN',
+  status: 'Active',
+  tier: 3,
+  lastUpdated: new Date().toISOString(),
 }
 
 // Dates are relative to now so "Today" / "Yesterday" groups always look current.
