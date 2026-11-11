@@ -14,7 +14,7 @@ export const account: Account = {
   holderName: 'Henry Joshua',
   accountNumber: randomAccountNumber(),
   accountType: 'Savings',
-  balance: 35000000,
+  balance: 35247816.52,
   savingsBalance: 0,
   availableCredit: 240000,
   currency: 'NGN',
